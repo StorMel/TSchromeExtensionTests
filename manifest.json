@@ -1,0 +1,28 @@
+{
+    "name": "Dice Logger",
+    "description": "Logs the last two dice images in the chat",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "backgroundService.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://colonist.io/*"],
+        "js":["Content.js"]
+      }
+    ],
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting",
+      "storage",
+      "notifications"
+    ],
+    "host_permissions": [
+      "https://colonist.io/*"
+    ],
+    "action": {
+      "default_icon": {}
+    }
+}
